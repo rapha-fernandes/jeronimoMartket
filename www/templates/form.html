@@ -1,0 +1,53 @@
+<ion-view title="Dados Cadastrais" id="page10">
+  <ion-content padding="true" style="background: url(img/123201556.jpg) no-repeat center;background-size:cover;" class="has-header">
+    <div>
+      <img src="img/mm1GDiABQ36pgpKhsRNG_jeronimo.png" style="display: block; width: 70%; height: auto; margin-left: auto; margin-right: auto;">
+    </div>
+
+    <div>
+      <form class="list">
+        <div class="spacer" style="width: 300px; height: 10px;"></div>
+        <label class="item item-input search" style="border-radius: 20px 20px 20px 20px!important;">
+          <span class="input-label">nome</span>
+          <input type="text" placeholder="" ng-model="nome.userNome">
+        </label>
+        <div class="spacer" style="width: 300px; height: 10px;"></div>
+        <label class="item item-input search" style="border-radius: 20px 20px 20px 20px!important;">
+          <span class="input-label">email</span>
+          <input type="email" placeholder="" ng-model="email.userEmail">
+        </label>
+        <div class="spacer" style="width: 300px; height: 10px;"></div>
+        <label class="item item-input search" style="border-radius: 20px 20px 20px 20px!important;">
+          <span class="input-label">senha</span>
+          <input type="password" placeholder="para alterar a senha" ng-model="senha.userSenha">
+        </label>
+        <div class="spacer" style="width: 300px; height: 10px;"></div>
+        <label class="item item-input search" style="border-radius: 20px 20px 20px 20px!important;">
+          <span class="input-label">cpf</span>
+          <input type="text" placeholder="123.456.789-00" ng-model="cpf.userCpf">
+        </label>
+        <div class="spacer" style="width: 300px; height: 10px;"></div>
+        <label class="item item-input search" style="border-radius: 20px 20px 20px 20px!important;">
+          <span class="input-label">telefone</span>
+          <input type="text" placeholder="00 9999-9999" ng-model="tel.userTel">
+        </label>
+        <div class="spacer" style="width: 300px; height: 10px;"></div>
+        <label class="item item-input search" style="border-radius: 20px 20px 20px 20px!important;">
+          <span class="input-label">endereço</span>
+          <input type="text" placeholder="rua dos bobos, 0, compl." ng-model="endereco.userEndereco">
+        </label>
+        <div class="spacer" style="width: 300px; height: 10px;"></div>
+        <label class="item item-input search" style="border-radius: 20px 20px 20px 20px!important;">
+          <span class="input-label">cep</span>
+          <input type="text" placeholder="12.345-678" ng-model="cep.userCep">
+        </label>
+        <div class="spacer" style="width: 300px; height: 17px;"></div>
+      </form>
+    </div>
+    <div class="button-bar">
+      <button ng-click="enviarDadosCadastrais(nome,email,senha,cpf,tel,endereco,cep)" style="border-radius:25px 25px 25px 25px;" class="button button-positive  button-block">Salvar</button>
+      <button ui-sref="menu.profile" style="border-radius:25px 25px 25px 25px;" class="button button-positive  button-block">Cancelar</button>
+    </div>
+
+  </ion-content>
+</ion-view>

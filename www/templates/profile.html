@@ -1,0 +1,39 @@
+<ion-view title="Minha Conta" id="page9">
+  <ion-content padding="true" style="background: url(img/123201556.jpg) no-repeat center;background-size:cover;" class="has-header">
+    <div>
+      <img src="img/WexT3puTeu1w6pCVNP71_jeronimo.png" style="display: block; width: 70%; height: auto; margin-left: auto; margin-right: auto;">
+    </div>
+
+    <div>
+      <img src="https://s3.amazonaws.com/ionic-io-static/jqJNSjzORuCGMuqPLSiw_profile_picture.png" style="display: block; width: 60%; height: auto; margin-left: auto; margin-right: auto;">
+    </div>
+
+    <div>
+      <h1 style="color:#000000;text-align:center;">{{nome}}Blas</h1>
+      <h3 style="color:#000000;font-weight:400;text-align:center;">{{email}}Blas</h3>
+    </div>
+
+    <div class="spacer" style="width: 300px; height: 17px;"></div>
+    <ion-list>
+      <ion-item class="item-icon-left  search" style="border-radius: 20px 20px 20px 20px!important;">
+        <i class="icon ion-android-pin" ></i>{{endereco}}Blas</ion-item>
+    </ion-list>
+    <div class="spacer" style="height: 10px;"></div>
+    <ion-list>
+      <ion-item class="item-icon-left  search" style="border-radius: 20px 20px 20px 20px!important;">
+        <i class="icon ion-android-call"></i>{{tel}}Blas</ion-item>
+    </ion-list>
+    <div class="spacer" style="height: 10px;"></div>
+    <ion-list>
+      <ion-item class="item-icon-left  search" style="border-radius: 20px 20px 20px 20px!important;">
+        <i class="icon ion-archive"></i>Meus Pedidos</ion-item>
+    </ion-list>
+    <div class="spacer" style="height: 10px;"></div>
+    <ion-list>
+      <ion-item class="item-icon-left  search" style="border-radius: 20px 20px 20px 20px!important;" ui-sref="menu.form" ng-click="irParaDados()">
+        <i class="icon ion-android-settings"></i>Alterar Dados</ion-item>
+    </ion-list>
+    <div class="spacer" style="height: 10px;"></div>
+
+  </ion-content>
+</ion-view>

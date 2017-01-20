@@ -1,0 +1,27 @@
+<ion-view title="Descrição" id="page6">
+  <ion-content padding="true" style="background: url(img/123201556.jpg) no-repeat center;background-size:cover;" class="has-header">
+    <div>
+      <img src="img/Y88L1lCjSeO7PcSWgpFR_jeronimo.png" style="display: block; width: 70%; height: auto; margin-left: auto; margin-right: auto;">
+    </div>
+
+    <div class="list card">
+      <div class=" item item-image">
+        <img src="{{product.productImage}}" style="display: block; width: 65%; height: auto; margin-left: auto; margin-right: auto;">
+      </div>
+      <h4 style="color:#000000;">{{product.productName}}</h4>
+      <span>{{product.productDescription}}</span>
+      <div class="spacer" style="width: 300px; height: 23px;"></div>
+      <div>
+        <p class="oldPrice">{{product.productPrice}}</p>
+        <p class="newPrice">{{product.productOldPrice}}</p>
+      </div>
+      <div class="button-bar">
+        <button ng-click="vaiPraHome()" style="font-size:10px;" class="button button-positive  button-block">Continuar Comprando</button>
+        <button  ng-click="addCart(product)" class="button button-balanced  button-block">Add Carrinho</button>
+      </div>
+    </div>
+
+
+
+  </ion-content>
+</ion-view>

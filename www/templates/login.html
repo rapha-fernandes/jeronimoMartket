@@ -1,0 +1,26 @@
+<ion-view title="Login" hide-nav-bar="true" id="page4">
+  <ion-content padding="true" style="background: url(img/123201556.jpg) no-repeat center;background-size:cover;" class="manual-ios-statusbar-padding">
+    <div>
+      <img src="img/oLqgqJocR7iVg4SIMujy_jeronimo.png" style="display: block; width: 100%; height: auto; margin-left: auto; margin-right: auto;">
+    </div>
+    <form id="login-form1" class="list">
+      <div class="spacer" style="width: 300px; height: 19px;"></div>
+      <ion-list id="login-list2">
+        <label class="item item-input item-stacked-label" id="login-input10">
+          <span class="input-label">user</span>
+          <input type="text" placeholder="" ng-model="user">
+        </label>
+        <label class="item item-input item-stacked-label" id="login-input2">
+          <span class="input-label">Password</span>
+          <input type="password" placeholder="" ng-model="password">
+        </label>
+      </ion-list>
+      <div id="login-markdown12" ng-if="error" style="text-align:center;" class="show-list-numbers-and-dots">
+        <p style="color:#F60A28;">Usuario ou senha invalidos!</p>
+      </div>
+      <div class="spacer" style="width: 300px; height: 30px;"></div>
+      <button id="login-button1" ng-click="login(user,password)" style="color:#FFFFFF;border-radius:20px 20px 20px 20px;" class="button button-calm  button-block">Log in</button>
+      <a ui-sref="signup" id="login-button2" class="button button-positive  button-block button-clear">Or create an account</a>
+    </form>
+  </ion-content>
+</ion-view>

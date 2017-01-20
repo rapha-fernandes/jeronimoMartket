@@ -1,0 +1,40 @@
+<ion-view title="" id="page1">
+  <ion-nav-buttons side="right" class="has-header">
+
+    <label class="item item-input" style="border-radius: 25px 25px 25px 25px!important;">
+      <i class="icon ion-search placeholder-icon"></i>
+      <input type="search">
+    </label>
+
+  <!-- </ion-nav-buttons>
+
+  <ion-nav-buttons side="right" class="has-header"> -->
+      <button ui-sref="menu.carrinho" class="button button-icon icon ion-android-cart"></button>
+
+  </ion-nav-buttons>
+  <ion-content padding="true" style="background: url(img/123201556.jpg) no-repeat center;background-size:cover;" class="has-header">
+    <div>
+      <img src="img/WjxEyx7WTNOifCoeWTXl_jeronimo.png" style="display: block; width: 70%; height: auto; margin-left: auto; margin-right: auto;">
+    </div>
+    <form id="home-form4" class="list">
+    </form>
+    <div class="spacer" style="width: 300px; height: 11px;"></div>
+
+    <ion-list id="home-list5" ng-repeat="i in products">
+      <ion-item class="item-thumbnail-left item-icon-right positive" id="home-list-item11">
+        <img src={{i.productImage}}>
+        <h2positive>{{i.productName}}<span style="color:gray;font-style: italic;font-size: 13px;">{{" - id " + i.productId}}</span>
+          <p>{{"R$ " + i.productPrice + 0.00}}</p>
+          <i class="icon ion-chevron-left icon-accessory"></i>
+          <ion-option-button  ng-click="addCart(i)" class="button-dark">
+            <center> <i class="icon ion-android-cart"></i> </center>
+          </ion-option-button>
+          <ion-option-button ng-click="descricao(i)" class="button-dark">
+            <i class="icon ion-information-circled"></i>
+          </ion-option-button>
+        </h2positive>
+      </ion-item>
+    </ion-list>
+
+  </ion-content>
+</ion-view>

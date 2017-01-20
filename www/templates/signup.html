@@ -1,0 +1,29 @@
+<ion-view title="Signup" hide-nav-bar="true" id="page5">
+  <ion-content padding="true" style="background: url(img/Supermarket-image-870x580.jpg) no-repeat center;background-size:cover;" class="manual-ios-statusbar-padding">
+    <div>
+      <img src="img/UNtLZWv4RnuPE7hBUfkh_jeronimo.png" style="display: block; width: 100%; height: auto; margin-left: auto; margin-right: auto;">
+    </div>
+    <h1 id="signup-heading2" style="color:#FDFAFA;text-align:center;">Bem Vindo!</h1>
+    <div class="spacer" style="width: 300px; height: 15px;"></div>
+    <button id="signup-button12" style="border-radius:5px 5px 5px 5px;" class="button button-royal  button-block icon-right ion-social-facebook">Cadastre com Facebook</button>
+    <h4 id="signup-heading3" style="color:#FFFFFF;text-align:center;">Ou</h4>
+    <form id="signup-form2" class="list">
+      <div class="spacer" style="width: 300px; height: 13px;"></div>
+      <ion-list id="signup-list3">
+        <label class="item item-input" id="signup-input3">
+          <span class="input-label">Nome</span>
+          <input type="text" placeholder="" ng-model="name">
+        </label>
+        <label class="item item-input" id="signup-input4">
+          <span class="input-label">Email</span>
+          <input type="email" placeholder="" ng-model="email">
+        </label>
+        <label class="item item-input" id="signup-input5">
+          <span class="input-label">Password</span>
+          <input type="password" placeholder="" ng-model="password">
+        </label>
+      </ion-list>
+      <button id="signup-button3" ng-click="signup(name,email,password)" style="border-radius:5px 5px 5px 5px;" class="button button-balanced  button-block">Sign up</button>
+    </form>
+  </ion-content>
+</ion-view>
