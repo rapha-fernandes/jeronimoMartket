@@ -3,32 +3,28 @@
     <div>
       <img src="img/K6IKaYSuWrXKozNZzoTQ_jeronimo.png" style="display: block; width: 70%; height: auto; margin-left: auto; margin-right: auto;">
     </div>
+
     <div class="spacer" style="width: 300px; height: 24px;"></div>
-    <form id="carrinho-form7" class="list">
-      <ion-item class="item-avatar" id="carrinho-list-item36">
-        <img src="img/00003.jpg">
-        <h2>OMO em pó - 4kg</h2>
-        <p>R$39,90</p>
-      </ion-item>
-      <ion-item class="item-avatar" id="carrinho-list-item37">
-        <img src="img/doblehoja-interior.png">
-        <h2>Papel Higiênico Confort 4 unid</h2>
-        <p>R$7,99</p>
-      </ion-item>
-      <ion-item class="item-avatar" id="carrinho-list-item38">
-        <img src="img/limpador_veja_multiuso_2.jpg">
-        <h2>Veja Multiuso - 500ml</h2>
-        <p>R$2,99</p>
-      </ion-item>
-      <div class="spacer" style="width: 300px; height: 23px;"></div>
-      <label class="item item-input" id="carrinho-textarea1">
-        <span class="input-label">Subtotal ------------------- R$50,88</span><textarea placeholder=""></textarea></label>
-      <label class="item item-input" id="carrinho-textarea3">
-        <span class="input-label">Frete ----------------------- R$10,00</span><textarea placeholder=""></textarea></label>
-      <div class="spacer" style="width: 300px; height: 23px;"></div>
-      <label class="item item-input" id="carrinho-textarea2">
-        <span class="input-label">Total ----------------------- R$60,88</span><textarea placeholder=""></textarea></label>
-    </form>
-    <button id="carrinho-button11" style="border-radius:20px 20px 20px 20px;" class="button button-balanced  button-block">Comprar</button>
+    <div ng-repeat="product in products">
+      <ion-list>
+        <ion-item class="item-avatar">
+          <img src="{{product.productImage}}">
+          <h2>{{product.productName}}</h2>
+          <p style="font-size:20px;color:red;">{{"R$ " + product.productPrice.toFixed(2)}}</p>
+        </ion-item>
+      </ion-list>
+    </div>
+
+    <div class="show-list-numbers-and-dots">
+      <p style="color:#000000;background-color: white;font-size:20px;color:red;">{{"Valor Total: R$ " + total.toFixed(2)}}</p>
+    </div>
+
+    <div class="show-list-numbers-and-dots"></div>
+
+    <div class="button-bar">
+      <button ui-sref="menu.home" class="button button-calm  button-block">Continuar compra</button>
+      <button class="button button-balanced  button-block">Finalizar compra</button>
+    </div>
+
   </ion-content>
 </ion-view>
