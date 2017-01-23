@@ -4,7 +4,7 @@ angular.module('app.controllers', [])
 .controller('homeCtrl', ['$scope', '$stateParams', 'productService', '$state',// The following is the constructor function for this page's controller. See https://docs.angularjs.org/guide/controller
 // You can include any angular dependencies as parameters for this function
 // TIP: Access Route Parameters for your page via $stateParams.parameterName
-function ($scope, $stateParams, productService, $state) {
+function ($scope, $stateParams, productService, $state ) {
     $scope.products = productService.getProduct();
 
     $scope.addCart = function(item){
@@ -80,12 +80,17 @@ function ($scope, $stateParams, $state, productService) {
 
 }])
 
-.controller('carrinhoCtrl', ['$scope', '$stateParams', // The following is the constructor function for this page's controller. See https://docs.angularjs.org/guide/controller
+.controller('carrinhoCtrl', ['$scope', '$stateParams', 'productService',// The following is the constructor function for this page's controller. See https://docs.angularjs.org/guide/controller
 // You can include any angular dependencies as parameters for this function
 // TIP: Access Route Parameters for your page via $stateParams.parameterName
-function ($scope, $stateParams) {
+function ($scope, $stateParams, productService) {
+  $scope.products = productService.getCarrinho();
+  $scope.total = 0;
 
-
+  for(var i=0 ; i<$scope.products.length ; i++){
+    // console.log($scope.products[i].productPrice);
+    $scope.total += $scope.products[i].productPrice;
+  };
 }])
 
 .controller('contatoCtrl', ['$scope', '$stateParams', // The following is the constructor function for this page's controller. See https://docs.angularjs.org/guide/controller
@@ -96,10 +101,11 @@ function ($scope, $stateParams) {
 
 }])
 
-.controller('profileCtrl', ['$scope', '$stateParams', // The following is the constructor function for this page's controller. See https://docs.angularjs.org/guide/controller
+.controller('profileCtrl', ['$scope', '$stateParams', 'userInfo', // The following is the constructor function for this page's controller. See https://docs.angularjs.org/guide/controller
 // You can include any angular dependencies as parameters for this function
 // TIP: Access Route Parameters for your page via $stateParams.parameterName
-function ($scope, $stateParams) {
+function ($scope, $stateParams, userInfo) {
+  $scope.info = userInfo.getUser();
 
 
 }])
