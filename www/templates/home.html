@@ -1,17 +1,17 @@
 <ion-view title="" id="page1">
   <ion-nav-buttons side="right" class="has-header">
 
-    <label class="item item-input" style="border-radius: 25px 25px 25px 25px!important;">
+    <!-- <label class="item item-input" >
       <i class="icon ion-search placeholder-icon"></i>
       <input ng-model="filtro" type="search">
-    </label>
+    </label> -->
 
   <!-- </ion-nav-buttons>
 
   <ion-nav-buttons side="right" class="has-header"> -->
       <button ui-sref="menu.carrinho" class="button button-icon icon ion-android-cart">
         <i ng-model="contProdutos" class="icon badge-container"> <!-- CONTADOR DE PRODUTOS NO CARRINHO -->
-          <span class="badge badge-assertive">3</span>
+          <span class="badge badge-assertive">{{carregaCarrinho.length}}</span>
         </i>
       </button>
 
@@ -22,10 +22,17 @@
     </div>
     <form id="home-form4" class="list">
     </form>
-    <div class="spacer" style="width: 300px; height: 11px;"></div>
-<input ng-model="filtro" type="search">
-    <ion-list id="home-list5" ng-repeat="i in products | filter:filtro">
 
+    <label class="item item-input" style="border-radius: 25px 25px 25px 25px!important;">
+      <i class="icon ion-search placeholder-icon"></i>
+      <input ng-model="filtro" type="search" placeholder="">
+    </label>
+
+    <div class="spacer" style="width: 300px; height: 11px;"></div>
+
+    <!-- <input ng-model="filtro" type="search"> -->
+
+    <ion-list id="home-list5" ng-repeat="i in products | filter:filtro">
       <ion-item class="item-thumbnail-left item-icon-right positive" id="home-list-item11">
         <img src={{i.productImage}}>
         <h2positive>{{i.productName}}<span style="color:gray;font-style: italic;font-size: 13px;">{{" - id " + i.productId}}</span>
