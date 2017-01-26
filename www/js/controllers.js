@@ -6,9 +6,13 @@ angular.module('app.controllers', [])
 // TIP: Access Route Parameters for your page via $stateParams.parameterName
 function ($scope, $stateParams, productService, $state ) {
     $scope.products = productService.getProduct();
+    if (productService.getCarrinho().length == 0) {
+      $scope.productsQut = 0;
+    }
 
     $scope.addCart = function(item){
         productService.carregaCarrinho(item);
+        $scope.productsQut = productService.getCarrinho().length;
     }
 
     $scope.descricao = function (item) {
