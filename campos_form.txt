@@ -1,0 +1,7 @@
+nome
+email
+senha (UTILIZE ESSE CAMPO SE FOR ALTERAR A SENHA)
+CPF
+Telefone
+Endereço
+CEP
